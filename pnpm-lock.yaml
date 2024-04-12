@@ -10,6 +10,9 @@ dependencies:
     version: 10.20.2
 
 devDependencies:
+  '@types/webpack-env':
+    specifier: ^1.15.2
+    version: 1.18.4
   html-webpack-plugin:
     specifier: ^5.5.3
     version: 5.5.3(webpack@5.88.1)
@@ -210,6 +213,10 @@ packages:
     resolution: {integrity: sha512-f0KEEe05NvUnat+boPTZ0dgaLZ4SfSouXUgv5noUiefG2ajgKjmETo9ZJyuqsl7dfl2aHlLJUiki6B4ZYldiiw==}
     dependencies:
       '@types/node': 20.3.3
+    dev: true
+
+  /@types/webpack-env@1.18.4:
+    resolution: {integrity: sha512-I6e+9+HtWADAWeeJWDFQtdk4EVSAbj6Rtz4q8fJ7mSr1M0jzlFcs8/HZ+Xb5SHzVm1dxH7aUiI+A8kA8Gcrm0A==}
     dev: true
 
   /@types/ws@8.5.5:
