@@ -2,6 +2,7 @@
 
 import { resolve as pathResolve } from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import PreactRefreshPlugin from "@prefresh/webpack";
 
 const resolve = pathResolve.bind(undefined, import.meta.dirname);
 
@@ -24,6 +25,8 @@ const config = {
 
 		// Add your plugins here
 		// Learn more about plugins from https://webpack.js.org/configuration/plugins/
+		// @ts-ignore
+		new PreactRefreshPlugin(),
 	],
 	module: {
 		rules: [

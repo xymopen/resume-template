@@ -5,9 +5,11 @@
   "description": "",
   "type": "module",
   "dependencies": {
+    "@prefresh/core": "^1.5.2",
     "preact": "^10.15.0"
   },
   "devDependencies": {
+    "@prefresh/webpack": "^4.0.0",
     "@types/webpack-env": "^1.15.2",
     "html-webpack-plugin": "^5.5.3",
     "ts-loader": "^9.4.4",
@@ -23,5 +25,10 @@
     "watch": "webpack --watch",
     "serve": "webpack serve",
     "dev": "webpack serve --mode=development"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@prefresh/webpack@4.0.0": "patches/@prefresh__webpack@4.0.0.patch"
+    }
   }
 }
