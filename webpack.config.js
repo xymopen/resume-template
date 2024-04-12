@@ -47,6 +47,29 @@ const config = {
 				exclude: [/([/\\])node_modules\1/],
 			},
 			{
+				test: /\.mdx?$/,
+				use: [
+					{
+						loader: "ts-loader",
+						options: {
+							transpileOnly: true,
+							appendTsxSuffixTo: ['\\.mdx?$'],
+						},
+					},
+					{
+						loader: "@mdx-js/loader",
+						/** @type {import("@mdx-js/loader").Options} */
+						options: {
+							elementAttributeNameCase: "html",
+							jsx: true,
+							jsxImportSource: "preact",
+							providerImportSource: "@mdx-js/preact",
+							stylePropertyNameCase: "dom",
+						}
+					}
+				]
+			},
+			{
 				test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
 				type: "asset",
 			},
@@ -56,7 +79,11 @@ const config = {
 		],
 	},
 	resolve: {
-		extensions: [".tsx", ".ts", ".jsx", ".js"],
+		extensions: [".tsx", ".ts", ".jsx", ".js", ".mdx", ".md"],
+		alias: {
+			// ts-loader would produce `preact*//jsx-runtime` instead of `preact/jsx-runtime`
+			"preact*/": "preact",
+		}
 	},
 	experiments: {
 		css: true,

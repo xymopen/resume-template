@@ -8,7 +8,10 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "allowJs": true,
-    "types": ["webpack-env"]
+    "types": [
+      "mdx",
+      "webpack-env"
+    ]
   },
   "files": ["src/index.tsx"]
 }
