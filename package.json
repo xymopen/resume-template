@@ -5,11 +5,14 @@
   "description": "",
   "type": "module",
   "dependencies": {
+    "@mdx-js/preact": "^3.0.1",
     "@prefresh/core": "^1.5.2",
     "preact": "^10.15.0"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^3.0.1",
     "@prefresh/webpack": "^4.0.0",
+    "@types/mdx": "^2.0.13",
     "@types/webpack-env": "^1.15.2",
     "html-webpack-plugin": "^5.5.3",
     "ts-loader": "^9.4.4",
