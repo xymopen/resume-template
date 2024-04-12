@@ -4,12 +4,23 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@prefresh/webpack@4.0.0':
+    hash: yshdmyqzuaecbtwodmseaxtof4
+    path: patches/@prefresh__webpack@4.0.0.patch
+
 dependencies:
+  '@prefresh/core':
+    specifier: ^1.5.2
+    version: 1.5.2(preact@10.20.2)
   preact:
     specifier: ^10.15.0
     version: 10.20.2
 
 devDependencies:
+  '@prefresh/webpack':
+    specifier: ^4.0.0
+    version: 4.0.0(patch_hash=yshdmyqzuaecbtwodmseaxtof4)(@prefresh/babel-plugin@0.5.1)(preact@10.20.2)(webpack@5.88.1)
   '@types/webpack-env':
     specifier: ^1.15.2
     version: 1.18.4
@@ -83,6 +94,36 @@ packages:
   /@leichtgewicht/ip-codec@2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: true
+
+  /@prefresh/babel-plugin@0.5.1:
+    resolution: {integrity: sha512-uG3jGEAysxWoyG3XkYfjYHgaySFrSsaEb4GagLzYaxlydbuREtaX+FTxuIidp241RaLl85XoHg9Ej6E4+V1pcg==}
+    dev: true
+
+  /@prefresh/core@1.5.2(preact@10.20.2):
+    resolution: {integrity: sha512-A/08vkaM1FogrCII5PZKCrygxSsc11obExBScm3JF1CryK2uDS3ZXeni7FeKCx1nYdUkj4UcJxzPzc1WliMzZA==}
+    peerDependencies:
+      preact: ^10.0.0
+    dependencies:
+      preact: 10.20.2
+
+  /@prefresh/utils@1.2.0:
+    resolution: {integrity: sha512-KtC/fZw+oqtwOLUFM9UtiitB0JsVX0zLKNyRTA332sqREqSALIIQQxdUCS1P3xR/jT1e2e8/5rwH6gdcMLEmsQ==}
+    dev: true
+
+  /@prefresh/webpack@4.0.0(patch_hash=yshdmyqzuaecbtwodmseaxtof4)(@prefresh/babel-plugin@0.5.1)(preact@10.20.2)(webpack@5.88.1):
+    resolution: {integrity: sha512-Ppr8GNASfq/Zsw/dFOhHz3DYZWfAnqRhz2ryZo4b7VA4x4nQzALYLILK32w9YdSw6WYhIMQdjBkugk6PstcwFg==}
+    peerDependencies:
+      '@prefresh/babel-plugin': ^0.5.0
+      preact: ^10.4.0
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      '@prefresh/babel-plugin': 0.5.1
+      '@prefresh/core': 1.5.2(preact@10.20.2)
+      '@prefresh/utils': 1.2.0
+      preact: 10.20.2
+      webpack: 5.88.1(webpack-cli@5.1.4)
+    dev: true
+    patched: true
 
   /@types/body-parser@1.19.2:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
@@ -1691,7 +1732,6 @@ packages:
 
   /preact@10.20.2:
     resolution: {integrity: sha512-S1d1ernz3KQ+Y2awUxKakpfOg2CEmJmwOP+6igPx6dgr6pgDvenqYviyokWso2rhHvGtTlWWnJDa7RaPbQerTg==}
-    dev: false
 
   /pretty-error@4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
