@@ -7,7 +7,8 @@
     "target": "esnext",
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "allowJs": true
+    "allowJs": true,
+    "types": ["webpack-env"]
   },
   "files": ["src/index.tsx"]
 }
