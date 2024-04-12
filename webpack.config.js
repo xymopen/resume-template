@@ -29,7 +29,14 @@ const config = {
 		rules: [
 			{
 				test: /\.tsx?$/i,
-				loader: "ts-loader",
+				use: [
+					{
+						loader: "ts-loader",
+						options: {
+							transpileOnly: true,
+						},
+					},
+				],
 				exclude: [/([/\\])node_modules\1/],
 			},
 			{
