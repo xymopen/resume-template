@@ -4,7 +4,10 @@
     "noImplicitAny": true,
     "module": "esnext",
     "moduleResolution": "bundler",
-    "target": "esnext"
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "allowJs": true
   },
-  "files": ["src/index.ts"]
+  "files": ["src/index.tsx"]
 }

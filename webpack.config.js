@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV == "production";
 
 /** @type {import('webpack').Configuration & { devServer: import('webpack-dev-server').Configuration }} */
 const config = {
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   output: {
     path: resolve("dist"),
   },
