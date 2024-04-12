@@ -59,8 +59,10 @@ const config = {
 export default () => {
   if (isProduction) {
     config.mode = "production";
+    config.devtool = false
   } else {
     config.mode = "development";
+    config.devtool = "source-map"
   }
   return config;
 };
