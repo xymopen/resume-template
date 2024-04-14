@@ -77,6 +77,7 @@ const config = {
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".mdx", ".md"],
     alias: {
+      "assets": resolve("assets"),
       // ts-loader would produce `preact*//jsx-runtime` instead of `preact/jsx-runtime`
       "preact*/": "preact",
     }
