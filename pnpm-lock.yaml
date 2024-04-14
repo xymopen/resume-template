@@ -10,6 +10,9 @@ patchedDependencies:
     path: patches/@prefresh__webpack@4.0.0.patch
 
 dependencies:
+  '@csstools/normalize.css':
+    specifier: ^12.1.1
+    version: 12.1.1
   '@mdx-js/preact':
     specifier: ^3.0.1
     version: 3.0.1(preact@10.20.2)
@@ -56,6 +59,10 @@ devDependencies:
     version: 4.15.1(webpack-cli@5.1.4)(webpack@5.88.1)
 
 packages:
+
+  /@csstools/normalize.css@12.1.1:
+    resolution: {integrity: sha512-YAYeJ+Xqh7fUou1d1j9XHl44BmsuThiTr4iNrgCQ3J27IbhXsxXDGZ1cXv8Qvs99d4rBbLiSKy3+WZiet32PcQ==}
+    dev: false
 
   /@discoveryjs/json-ext@0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}

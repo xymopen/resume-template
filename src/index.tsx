@@ -1,6 +1,7 @@
 import { render } from 'preact';
 import { MDXProvider } from '@mdx-js/preact'
 import App from "./app"
+import "@csstools/normalize.css"
 import "./index.css"
 
 render(
