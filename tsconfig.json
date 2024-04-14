@@ -11,7 +11,11 @@
     "types": [
       "mdx",
       "webpack-env"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["./assets/*"]
+    }
   },
   "files": ["src/index.tsx"]
 }
