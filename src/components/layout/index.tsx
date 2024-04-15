@@ -1,7 +1,8 @@
 import { PropsWithChildren } from "preact/compat";
+import "./index.css"
 
 export default function Layout(props: PropsWithChildren) {
-	return <div>
+	return <main>
 		{props.children}
-	</div>
+	</main>
 }
