@@ -18,6 +18,18 @@ a {
 
 	&:not(:has(*)) {
 		text-decoration: underline;
+
+		&::after {
+			content: ' ';
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			vertical-align: middle;
+			background-image: url(weui-icon/src/assets/filled/link.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
 	}
 }
 
