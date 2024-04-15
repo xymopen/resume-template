@@ -1,0 +1,15 @@
+.icon {
+	width: auto;
+	height: 1em;
+	line-height: 1em;
+	display: inline-block;
+	vertical-align: middle;
+	background-image: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	&+& {
+		margin-inline-start: 0.5ch;
+	}
+}
