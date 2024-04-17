@@ -3,11 +3,12 @@
 	height: 1em;
 	line-height: 1em;
 	display: inline-block;
-	vertical-align: middle;
-	background-image: none;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
+
+	& > img {
+		width: auto;
+		height: 100%;
+		vertical-align: middle;
+	}
 
 	&+& {
 		margin-inline-start: 0.5ch;
