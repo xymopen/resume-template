@@ -10,10 +10,14 @@ body {
 a {
 	color: #555;
 	background-color: transparent;
-	text-decoration: underline;
+	text-decoration: none;
 
 	&:hover {
 		color: #00b38a;
+	}
+
+	&:not(:has(*)) {
+		text-decoration: underline;
 	}
 }
 
