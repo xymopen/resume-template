@@ -14,7 +14,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "assets/*": ["./assets/*"]
+      "assets/*": ["./assets/*"],
+      "components/*": ["./src/components/*"]
     }
   },
   "files": ["src/index.tsx"]
