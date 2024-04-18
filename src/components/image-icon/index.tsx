@@ -1,7 +1,7 @@
+import { JSX } from "preact/jsx-runtime";
 import "./index.css"
 
-type ImageIconProps = { src?: string }
-
-export default function ImageIcon({ src }: ImageIconProps) {
-	return <span class="icon"><img src={src} /></span>;
+export default function ImageIcon(props: JSX.HTMLAttributes<HTMLImageElement>) {
+	const { id, class: classProp, className: classNameProp, style, ...imgProps } = props;
+	return <span id={id} class={`icon ${classProp ?? classNameProp ?? ''}`} style={style}><img {...imgProps} /></span>;
 }
