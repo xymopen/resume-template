@@ -1,0 +1,145 @@
+* {
+	outline: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: "Hiragino Sans GB", "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
+	color: #333;
+	word-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+progress {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+a {
+	color: #555;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #00b38a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 10px 0;
+	font-weight: normal;
+}
+
+p {
+	margin: 0;
+}
+
+p+p {
+	margin-top: 10px;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+	display: inline-block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ededed;
+	border-radius: 0;
+	font-family: "Hiragino Sans GB", "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
+}
+
+textarea {
+	overflow: auto;
+}
+
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"] {
+	cursor: pointer;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+	font-family: "Microsoft Yahei", "SimSun", Arial, "Helvetica Neue", Helvetica;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,
+td {
+	padding: 0;
+}
+
+strong {
+	font-weight: normal;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+dl,
+dt,
+dd {
+	margin: 0;
+}
+
+::selection {
+	color: #fff;
+	background-color: #00b38a;
+}
+
+::-moz-selection {
+	color: #fff;
+	background-color: #00b38a;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
