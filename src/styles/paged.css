@@ -1,0 +1,33 @@
+/* Don't break inside lists */
+ol,
+ul,
+li {
+	break-inside: avoid;
+}
+
+li+li {
+	break-before: avoid;
+}
+
+/* Don't break inside description lists */
+dl,
+dd,
+dt {
+	break-inside: avoid;
+}
+
+dd+dt {
+	break-before: avoid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* Don't break heading between pages */
+	break-inside: avoid;
+	/* Don't break between heading and their section */
+	break-after: avoid;
+}
