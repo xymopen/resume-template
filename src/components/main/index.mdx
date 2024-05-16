@@ -1,19 +1,9 @@
 import "./index.css"
+import OrgHeader from "../org-header"
 
 export default function Layout({ children }) {
 	return <div className="main">
 		{children}
-	</div>
-}
-
-export function OrgHeader({ logo, title, duration, children }) {
-	return <div className="exp-item">
-		{logo && <img src={logo} />}
-		<div className="exp-right">
-			<h3>{title}</h3>
-			{children}
-		</div>
-		{duration && <p className="exp-duration">{duration}</p>}
 	</div>
 }
 
