@@ -10,7 +10,7 @@
 		line-height: initial;
 	}
 
-	& img {
+	& .exp-logo {
 		width: 46px;
 		height: 46px;
 		margin-right: 10px;
