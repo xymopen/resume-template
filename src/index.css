@@ -7,7 +7,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-a {
+a:not(:has(*)) {
 	color: #555;
 	background-color: transparent;
 	text-decoration: none;
