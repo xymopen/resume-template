@@ -7,34 +7,23 @@
   "dependencies": {
     "@csstools/normalize.css": "^12.1.1",
     "@mdx-js/preact": "^3.0.1",
-    "@prefresh/core": "^1.5.2",
     "preact": "^10.15.0",
     "weui-icon": "^1.0.2"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.0.1",
-    "@prefresh/webpack": "^4.0.0",
+    "@rspack/cli": "0.6.5",
+    "@rspack/core": "0.6.5",
     "@types/mdx": "^2.0.13",
     "@types/webpack-env": "^1.15.2",
-    "html-webpack-plugin": "^5.5.3",
-    "react-refresh-typescript": "^2.0.9",
-    "ts-loader": "^9.4.4",
-    "typescript": "~5.1.6",
-    "webpack": "^5.88.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "rspack-plugin-prefresh": "^0.6.5",
+    "typescript": "~5.1.6"
   },
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
-    "serve": "webpack serve",
-    "dev": "webpack serve --mode=development"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "@prefresh/webpack@4.0.0": "patches/@prefresh__webpack@4.0.0.patch"
-    }
+    "build": "rspack build --mode=production --node-env=production",
+    "build:dev": "rspack build --mode=development",
+    "build:prod": "rspack build --mode=production --node-env=production",
+    "serve": "rspack serve",
+    "dev": "rspack serve --mode=development"
   }
 }
