@@ -5,8 +5,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "target": "esnext",
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact",
+    "jsx": "preserve",
     "allowJs": true,
     "types": [
       "mdx",
