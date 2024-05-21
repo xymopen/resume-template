@@ -2,6 +2,7 @@
 
 import { resolve as pathResolve } from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import ReactRefreshTransformer from 'react-refresh-typescript'
 import PreactRefreshPlugin from "@prefresh/webpack";
 
 const resolve = pathResolve.bind(undefined, import.meta.dirname);
@@ -37,6 +38,9 @@ const config = {
 						loader: "ts-loader",
 						options: {
 							transpileOnly: true,
+							getCustomTransformers: () => ({
+								before: [ReactRefreshTransformer()]
+							}),
 						},
 					},
 				],

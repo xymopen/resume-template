@@ -12,6 +12,7 @@
     "@prefresh/webpack": "^4.0.0",
     "@types/webpack-env": "^1.15.2",
     "html-webpack-plugin": "^5.5.3",
+    "react-refresh-typescript": "^2.0.9",
     "ts-loader": "^9.4.4",
     "typescript": "~5.1.6",
     "webpack": "^5.88.1",
