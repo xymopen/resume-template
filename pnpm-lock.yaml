@@ -37,6 +37,9 @@ devDependencies:
   html-webpack-plugin:
     specifier: ^5.5.3
     version: 5.5.3(webpack@5.88.1)
+  rspack-plugin-prefresh:
+    specifier: ^0.6.5
+    version: 0.6.5(preact@10.20.2)
   ts-loader:
     specifier: ^9.4.4
     version: 9.4.4(typescript@5.1.6)(webpack@5.88.1)
@@ -177,6 +180,18 @@ packages:
 
   /@polka/url@1.0.0-next.25:
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
+    dev: true
+
+  /@prefresh/core@1.5.2(preact@10.20.2):
+    resolution: {integrity: sha512-A/08vkaM1FogrCII5PZKCrygxSsc11obExBScm3JF1CryK2uDS3ZXeni7FeKCx1nYdUkj4UcJxzPzc1WliMzZA==}
+    peerDependencies:
+      preact: ^10.0.0
+    dependencies:
+      preact: 10.20.2
+    dev: true
+
+  /@prefresh/utils@1.2.0:
+    resolution: {integrity: sha512-KtC/fZw+oqtwOLUFM9UtiitB0JsVX0zLKNyRTA332sqREqSALIIQQxdUCS1P3xR/jT1e2e8/5rwH6gdcMLEmsQ==}
     dev: true
 
   /@rspack/binding-darwin-arm64@0.6.5:
@@ -3067,7 +3082,6 @@ packages:
 
   /preact@10.20.2:
     resolution: {integrity: sha512-S1d1ernz3KQ+Y2awUxKakpfOg2CEmJmwOP+6igPx6dgr6pgDvenqYviyokWso2rhHvGtTlWWnJDa7RaPbQerTg==}
-    dev: false
 
   /pretty-error@4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
@@ -3253,6 +3267,15 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+
+  /rspack-plugin-prefresh@0.6.5(preact@10.20.2):
+    resolution: {integrity: sha512-b9eyammIqxaKPGBHgt1xT8aSds+u/gKpGar6YR1plRIE80vikF4YY5sv/aHPGCpHT2KZ3Wc6d1lElG7EEvO5cA==}
+    dependencies:
+      '@prefresh/core': 1.5.2(preact@10.20.2)
+      '@prefresh/utils': 1.2.0
+    transitivePeerDependencies:
+      - preact
+    dev: true
 
   /safe-array-concat@1.1.2:
     resolution: {integrity: sha512-vj6RsCsWBCf19jIeHEfkRMw8DPiBb+DMXklQ/1SGDHOMlHdPUkZXFQ2YdplS23zESTijAcurb1aSgJA3AgMu1Q==}

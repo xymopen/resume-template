@@ -1,7 +1,7 @@
 import { resolve as pathResolve } from "path";
 import { readFileSync } from "fs";
 import rspack from "@rspack/core";
-// We don't have prefresh for rspack yet!
+import PreacrRefreshPlugin from "rspack-plugin-prefresh"
 
 const resolve = pathResolve.bind(undefined, import.meta.dirname);
 
@@ -15,6 +15,9 @@ const config = {
 	plugins: [
 		new rspack.HtmlRspackPlugin({
 			template: "index.html",
+		}),
+		new PreacrRefreshPlugin({
+			include: /\.(tsx?|mdx?)$/i
 		}),
 	],
 	module: {
@@ -72,7 +75,7 @@ export default () => {
 		config.mode = "development";
 		config.devtool = "source-map"
 		SwcConfig.jsc.transform.react.development = true
-		SwcConfig.jsc.transform.react.refresh = false
+		SwcConfig.jsc.transform.react.refresh = true
 	}
 	return config;
 };
