@@ -1,7 +1,7 @@
 import { resolve as pathResolve } from "path";
 import { readFileSync } from "fs";
 import rspack from "@rspack/core";
-import PreacrRefreshPlugin from "rspack-plugin-prefresh"
+import PreacrRefreshPlugin from "@rspack/plugin-preact-refresh"
 
 const resolve = pathResolve.bind(undefined, import.meta.dirname);
 
@@ -64,6 +64,9 @@ const config = {
 			"assets": resolve("assets"),
 			"components": resolve("src/components"),
 		}
+	},
+	experiments: {
+		css: true
 	}
 };
 
