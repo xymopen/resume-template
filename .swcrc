@@ -12,5 +12,10 @@
 			}
 		},
 		"target": "esnext"
+	},
+	"experimental": {
+		"plugins": [
+			["@swc/plugin-prefresh", {}]
+		]
 	}
 }

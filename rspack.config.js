@@ -1,7 +1,7 @@
 import { resolve as pathResolve } from "path";
 import { readFileSync } from "fs";
 import rspack from "@rspack/core";
-import PreacrRefreshPlugin from "@rspack/plugin-preact-refresh"
+import PreactRefreshPlugin from "@rspack/plugin-preact-refresh"
 
 const resolve = pathResolve.bind(undefined, import.meta.dirname);
 
@@ -16,8 +16,10 @@ const config = {
 		new rspack.HtmlRspackPlugin({
 			template: "index.html",
 		}),
-		new PreacrRefreshPlugin({
-			include: /\.(tsx?|mdx?)$/i
+		new PreactRefreshPlugin({
+			include: /\.(tsx?|mdx?)$/i,
+			// The default somehow breaks resolution of `jsx-dev-runtime`
+			preactPath: 'preact',
 		}),
 	],
 	module: {
@@ -55,6 +57,10 @@ const config = {
 			{
 				test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
 				type: "asset"
+			},
+			{
+				test: /\.css$/,
+				type: 'css/auto'
 			}
 		]
 	},
@@ -64,9 +70,6 @@ const config = {
 			"assets": resolve("assets"),
 			"components": resolve("src/components"),
 		}
-	},
-	experiments: {
-		css: true
 	}
 };
 
@@ -77,8 +80,6 @@ export default () => {
 	} else {
 		config.mode = "development";
 		config.devtool = "source-map"
-		SwcConfig.jsc.transform.react.development = true
-		SwcConfig.jsc.transform.react.refresh = true
 	}
 	return config;
 };
